@@ -1,0 +1,150 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Pacifico", cursive;
+}
+
+
+.form {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+   /* animation: fadeIn 0.5s ease, slideIn 0.3s ease; */
+    transition: opacity 0.3s ease-in-out;
+    position: relative;
+}
+
+.fade-in {
+    opacity: 0;
+}
+
+.fade-in.active {
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 1;
+}
+
+.fade-out.active {
+    opacity: 0;
+}
+
+li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+li input[type="text"] {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 10px; /* Add right margin to separate the input from the buttons */
+}
+
+li .button-container {
+    display: flex;
+    align-items: flex-start; /* Align buttons to the left side */
+    margin-top: 10px; /* Add top margin to separate buttons from the input field */
+}
+
+li button {
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    height: 28px;
+    width: 70px; 
+    margin-left: 5px; /* Add left margin to create spacing between buttons */
+    margin-bottom: 15px; /* Add bottom margin to create spacing between buttons and input field */
+    display: flex; /* Set button to be a flex container */
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+}
+
+li .button-container .save-button {
+    background-color: #28a745;
+}
+
+li .button-container .remove-button {
+    background-color: #dc3545;
+}
+
+li .button-container button:hover {
+    opacity: 0.85;
+}
+
+li.completed {
+    background-color: #d2f0d2; /* Light green background for completed tasks */
+}
+
+li.pending {
+    background-color: #f9f9f9; /* Default background color for pending tasks */
+}
+
+/* Styling for task status */
+.task-status {
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
+    margin-left: 10px; /* Add left margin to create spacing between input and status */
+}
+
+/* Adding some subtle animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-10px); }
+    to { transform: translateX(0); }
+}
+
